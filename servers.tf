@@ -132,12 +132,12 @@ resource "aws_instance" "shipping" {
   }
 }
 
-resource "aws_route53_record" "mysql" {
+resource "aws_route53_record" "shipping" {
   zone_id = Z08201413DP9SI70XZHGI
-  name    = "mysql-dev.kanand.online"
+  name    = "shipping-dev.kanand.online"
   type    = "A"
   ttl     = 30
-  records = [aws_instance.mysql.private_ip]
+  records = [aws_instance.shipping.private_ip]
 }
 
 resource "aws_instance" "rabbitmq" {
