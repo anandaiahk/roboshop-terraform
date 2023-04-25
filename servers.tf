@@ -14,7 +14,7 @@ resource "aws_instance" "frontend" {
 }
 
 resource "aws_route53_record" "frontend" {
-  zone_id = Z08201413DP9SI70XZHGI
+  zone_id = "Z08201413DP9SI70XZHGI"
   name    = "frontend-dev.kanand.online"
   type    = "A"
   ttl     = 30
@@ -31,7 +31,7 @@ resource "aws_instance" "mongodb" {
 }
 
 resource "aws_route53_record" "mongodb" {
-  zone_id = Z08201413DP9SI70XZHGI
+  zone_id = "Z08201413DP9SI70XZHGI"
   name    = "mongodb-dev.kanand.online"
   type    = "A"
   ttl     = 30
@@ -48,7 +48,7 @@ resource "aws_instance" "catalogue" {
 }
 
 resource "aws_route53_record" "catalogue" {
-  zone_id = Z08201413DP9SI70XZHGI
+  zone_id = "Z08201413DP9SI70XZHGI"
   name    = "catalogue-dev.kanand.online"
   type    = "A"
   ttl     = 30
@@ -65,7 +65,7 @@ resource "aws_instance" "redis" {
 }
 
 resource "aws_route53_record" "redis" {
-  zone_id = Z08201413DP9SI70XZHGI
+  zone_id = "Z08201413DP9SI70XZHGI"
   name    = "redis-dev.kanand.online"
   type    = "A"
   ttl     = 30
@@ -82,7 +82,7 @@ resource "aws_instance" "user" {
 }
 
 resource "aws_route53_record" "user" {
-  zone_id = Z08201413DP9SI70XZHGI
+  zone_id = "Z08201413DP9SI70XZHGI"
   name    = "user-dev.kanand.online"
   type    = "A"
   ttl     = 30
@@ -99,7 +99,7 @@ resource "aws_instance" "cart" {
 }
 
 resource "aws_route53_record" "cart" {
-  zone_id = Z08201413DP9SI70XZHGI
+  zone_id = "Z08201413DP9SI70XZHGI"
   name    = "cart-dev.kanand.online"
   type    = "A"
   ttl     = 30
@@ -116,7 +116,7 @@ resource "aws_instance" "mysql" {
 }
 
 resource "aws_route53_record" "mysql" {
-  zone_id = Z08201413DP9SI70XZHGI
+  zone_id = "Z08201413DP9SI70XZHGI"
   name    = "mysql-dev.kanand.online"
   type    = "A"
   ttl     = 30
@@ -133,7 +133,7 @@ resource "aws_instance" "shipping" {
 }
 
 resource "aws_route53_record" "shipping" {
-  zone_id = Z08201413DP9SI70XZHGI
+  zone_id = "Z08201413DP9SI70XZHGI"
   name    = "shipping-dev.kanand.online"
   type    = "A"
   ttl     = 30
@@ -150,7 +150,7 @@ resource "aws_instance" "rabbitmq" {
 }
 
 resource "aws_route53_record" "rabbitmq" {
-  zone_id = Z08201413DP9SI70XZHGI
+  zone_id = "Z08201413DP9SI70XZHGI"
   name    = "rabbitmq-dev.kanand.online"
   type    = "A"
   ttl     = 30
@@ -167,7 +167,7 @@ resource "aws_instance" "payment" {
 }
 
 resource "aws_route53_record" "payment" {
-  zone_id = Z08201413DP9SI70XZHGI
+  zone_id = "Z08201413DP9SI70XZHGI"
   name    = "payment-dev.kanand.online"
   type    = "A"
   ttl     = 30
