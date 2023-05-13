@@ -3,7 +3,7 @@ resource "aws_instance" "instance" {
   instance_type          = var.instance_type
   vpc_security_group_ids = [data.aws_security_group.allow-all.id]
   tags                   = {
-    Name = var.components_name
+    Name = var.component_name
   }
 }
 resource "null_resource" "provisioner" {
@@ -20,7 +20,7 @@ resource "null_resource" "provisioner" {
       "rm -rf roboshop-shell",
       "git clone https://github.com/anandaiahk/roboshop-shell.git",
       "cd roboshop-shell",
-      "sudo bash ${var.components_name}.sh ${var.password}"
+      "sudo bash ${var.component_name}.sh ${var.password}"
     ]
   }
 }
