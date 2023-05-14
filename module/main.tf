@@ -3,8 +3,8 @@ resource "aws_instance" "instance" {
   instance_type          = var.instance_type
   vpc_security_group_ids = [data.aws_security_group.allow-all.id]
   tags                   = {
-    Name = var.component_name
-  }
+    Name = var.env != "" ? "${var.component_name}-${var.env}" : var.component_name
+}
 }
 resource "null_resource" "provisioner" {
   depends_on = [aws_instance.instance, aws_route53_record.records]
