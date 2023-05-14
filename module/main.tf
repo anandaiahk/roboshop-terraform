@@ -3,7 +3,7 @@ resource "aws_instance" "instance" {
   instance_type          = var.instance_type
   vpc_security_group_ids = [data.aws_security_group.allow-all.id]
   tags                   = {
-    Name = locals.namw
+    Name = local.name
 }
 }
 resource "null_resource" "provisioner" {
